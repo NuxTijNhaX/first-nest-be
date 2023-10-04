@@ -6,6 +6,7 @@ import { EventsModule } from './events/events.module';
 import { AppVietnamService } from './app.vietnam.service';
 import { AppDummy } from './app.dummy';
 import { ConfigModule } from '@nestjs/config';
+import { SchoolModule } from './school/school.module';
 import ormConfig from './config/orm.config';
 import ormConfigProd from './config/orm.config.prod';
 
@@ -21,6 +22,7 @@ import ormConfigProd from './config/orm.config.prod';
         process.env.NODE_ENV !== 'production' ? ormConfig : ormConfigProd,
     }),
     EventsModule,
+    SchoolModule,
   ],
   controllers: [AppController],
   providers: [
